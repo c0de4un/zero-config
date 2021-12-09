@@ -49,6 +49,11 @@
 #include "zero_string.hpp"
 #endif // !ZERO_STRING_HPP
 
+// Include zero::core::Log
+#ifndef ZERO_CORE_LOG_HPP
+#include <zero/core/log/Log.hpp>
+#endif // !ZERO_CORE_LOG_HPP
+
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 #endif // !ZERO_DEBUG_HPP
