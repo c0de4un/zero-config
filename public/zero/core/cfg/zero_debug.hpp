@@ -25,40 +25,30 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef ZERO_PLATFORM_HPP
-#define ZERO_PLATFORM_HPP
+#ifndef ZERO_DEBUG_HPP
+#define ZERO_DEBUG_HPP
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// INCLUDES
+// INCLUDE
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-#ifndef ZERO_PLATFORM_DEFINED
+// Include zero::api
+#ifndef ZERO_API_HPP
+#include "zero_api.hpp"
+#endif // !ZERO_API_HPP
 
-	#if defined( MINGW ) || defined( MINGW32 ) || defined( MINGW64 ) || defined( WIN ) || defined( WIN32 ) || defined( _WIN32 ) || defined( _WIN64 ) || defined( WIN64 ) || defined( WINDOWS ) || defined( MSVC ) || defined( MSVC64 )
+// Include zero::assert
+#ifndef ZERO_ASSERT_HPP
+#include "zero_assert.hpp"
+#endif // !ZERO_ASSERT_HPP
 
-		// WINDOWS
-		#define ZERO_WINDOWS
-
-	#elif defined( ANDROID ) || defined( _android_ ) || defined( __android__ ) || defined( _android ) || defined( __android )
-
-		// ANDROID
-		#define ZERO_ANDROID
-
-	#elif defined( __linux ) || defined( _linux ) || defined( _linux_ ) || defined( __linux__ ) || defined( LINUX )
-
-		// LINUX
-		#define ZERO_LINUX
-
-	#else
-		#error "ZERO_platform.hpp - configuration required"
-	#endif
-
-#define ZERO_PLATFORM_DEFINED 1
-
-#endif
+// Include zero::string
+#ifndef ZERO_STRING_HPP
+#include "zero_string.hpp"
+#endif // !ZERO_STRING_HPP
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-#endif // !ZERO_PLATFORM_HPP
+#endif // !ZERO_DEBUG_HPP
